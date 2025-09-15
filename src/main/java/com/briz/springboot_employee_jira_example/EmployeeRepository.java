@@ -9,4 +9,5 @@ import org.springframework.stereotype.Repository;
 public interface EmployeeRepository extends JpaRepository<Employee,Integer>
 {
 List<Employee> findByName(String name);
+List<Employee> findByCity(String city);
 }

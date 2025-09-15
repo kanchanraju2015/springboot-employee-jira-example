@@ -41,6 +41,13 @@ public class EmployeeController {
 	{
 		return erepo.findByName(name);
 	}
+	
+	@GetMapping("/by/{city}")
+	public List<Employee> byCity(@PathVariable String city) {
+		return erepo.findByCity(city);
+	}
+	
+	
 	@GetMapping("/by/id") //http://localhost:8080/by/id?id=205
 	public Optional<Employee> byid(@RequestParam int id)
 	{
