@@ -7,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
 
 @DynamicInsert
 @DynamicUpdate
@@ -16,9 +17,14 @@ public class Employee {
 @Id
 @GeneratedValue(strategy=GenerationType.IDENTITY)
 int id;
+@NotBlank(message = "Name is mandatory")
 String name;
+
+@NotBlank(message = "Name is mandatory")
 int age;
 String city;
+
+@NotBlank(message = "Name is mandatory")
 String country;
 public int getId() {
 	return id;
