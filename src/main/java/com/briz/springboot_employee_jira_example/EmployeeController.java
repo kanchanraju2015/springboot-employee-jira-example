@@ -25,6 +25,12 @@ public class EmployeeController {
 	{
 		return "this is jira testing";
 	}
+	@RequestMapping("/santosh")
+	public String santosh()
+	{
+		return "this is jira testing by santosh";
+	}
+	
 	@RequestMapping("/save")
 	public String save(@RequestBody Employee employee)
 	{
