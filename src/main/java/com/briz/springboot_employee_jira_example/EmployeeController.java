@@ -30,7 +30,11 @@ public class EmployeeController {
 	{
 		return "this is jira testing by santosh";
 	}
-	
+	@RequestMapping("/check")
+	public String check()
+	{
+		return "this is check another end point testing ";
+	}
 	@RequestMapping("/save")
 	public String save(@RequestBody Employee employee)
 	{
